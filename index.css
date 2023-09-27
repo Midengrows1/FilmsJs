@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,300;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  /* background: rgb(12,232,233);
+    background: linear-gradient(133deg, rgba(12,232,233,1) 40%, rgba(29,48,253,1) 100%, rgba(69,116,252,0) 100%); */
+}
+
+.first_screen {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 222;
+  flex: 0 1 100vh;
+  position: relative;
+  background-image: url(https://img.freepik.com/free-photo/composition-of-cinema-elements-on-red-background-with-copy-space_23-2148457845.jpg?w=1380&t=st=1681312108~exp=1681312708~hmac=4c5463e8ec494c6f1b19e183840f99d5491c06ba5b9c0f68e3fa562aeeb28019);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.second_screen {
+  padding: 20px 0;
+  width: 100%;
+  min-height: 50vh;
+  background-color: #d94139;
+  height: 100%;
+  text-align: center;
+}
+.weather_container {
+  width: 400px;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+  justify-content: space-around;
+  text-align: center;
+  background-color: rgb(185 72 65);
+  position: relative;
+  z-index: 2;
+  /* background: rgb(205,40,241);
+    background: linear-gradient(133deg, rgba(205,40,241,1) 28%, rgba(111,29,253,1) 100%, rgba(17,70,226,0) 100%); */
+}
+.weather_container > * {
+  width: 100%;
+  padding: 10px;
+  outline: transparent;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+  position: relative;
+}
+.result_weather {
+  width: 350px;
+  height: 40%;
+  background: rgb(205, 40, 241);
+  background: linear-gradient(
+    133deg,
+    rgba(205, 40, 241, 1) 28%,
+    rgba(111, 29, 253, 1) 100%,
+    rgba(17, 70, 226, 0) 100%
+  );
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  /* display: none; */
+}
+.result_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #fff;
+  align-items: center;
+}
+/* .indicators_top{
+    margin-right: 10px;
+} */
+.result_top {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 20px 10px;
+  background-color: #000;
+}
+.result_top > * {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.result_degrees {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.result_degrees h2 {
+  font-size: 5vw;
+}
+.visible {
+  display: flex;
+}
+.back_black {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.8547794117647058) 5%,
+    rgba(0, 212, 255, 0) 90%
+  );
+}
+
+.wrapper_title {
+  color: #fff;
+  font-size: 2vw;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.wrapper_title h2 ~ p {
+  font-size: 1.5vw;
+  text-align: center;
+  margin: 1vw 0;
+}
+.cards_movie {
+  padding: 40px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 20px;
+  background-color: #d94139;
+  flex-flow: wrap row;
+  justify-content: space-around;
+}
+.card_film {
+  flex: 0 1 29%;
+  height: 15vw;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  overflow: hidden;
+  transition: transform 0.3s linear;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+}
+.cards_movie :hover.card_film {
+  transition: transform 0.3s linear;
+  transform: scale(1.1);
+}
+.poster {
+  width: 100%;
+  height: 100%;
+  flex: none;
+  overflow: hidden;
+}
+.poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card_description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.pagination > * {
+  padding: 5px 10px;
+}
+.page_btn {
+  border-radius: 5px;
+  border: transparent;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in;
+}
+.page_btn:active {
+  transition: transform 0.3s ease-in;
+  transform: scale(0.9);
+}
+.type_card {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.title_card {
+  font-size: 1.2vw;
+}
+.details {
+  padding: 10px;
+  font-size: 18px;
+  font-style: italic;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0, 0.2);
+}
+.details:hover {
+  color: #d94139;
+}
+
+.colored {
+  background-color: red;
+}
+.film_info {
+  margin-top: 3vw;
+
+  padding: 40px 60px;
+  display: none;
+}
+.inner_film {
+  display: flex;
+  height: max-content;
+  justify-content: space-between;
+  border-radius: 8px;
+  margin: 10px 0;
+  padding: 20px;
+  gap: 1vw;
+  background: #fff;
+  box-shadow: 0px 0px 50px rgb(85, 3, 3);
+}
+.inner_film > .film_description {
+  width: 75%;
+  text-align: left;
+  margin: 1vw 0;
+}
+ul {
+  list-style: none;
+}
+.film_about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.film_description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.film_banner {
+  width: 28%;
+  height: max-content;
+}
+[class*="_desk"] {
+  display: grid;
+  grid-template-columns: 8em 1fr;
+  grid-template-rows: minmax(3em, 1fr);
+  align-items: center;
+  font-size: 1.2vw;
+}

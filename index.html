@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js" defer></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="first_screen">
+            <div class="wrapper_title">
+                <h2>Фильмы, сериалы и многое другое без ограничений.</h2>
+                <p>Смотрите где угодно. Отменить подписку можно в любое время.</p>
+                <p>Готовы смотреть? Введите адрес электронной почты, чтобы оформить или возобновить подписку.</p>
+            </div>
+            <div class="weather_container">
+                <label for="city">
+                    <h2>Search:</h2>
+                </label>
+                <input type="text" class="city_place" id="film" placeholder="Type the title" autocomplete="off">
+                <select name="movieSearch" id="movieSearch">
+                    <option value="movie">Movie</option>
+                    <option value="series">Series</option>
+                    <option value="episode">Episode</option>
+                </select>
+                <button class="btn_default" id="btnSearch"> Search</button>
+            </div>
+            <div class="back_black"></div>
+        </section>
+        <section class="second_screen">
+
+            <h2>Films</h2>
+            <div class="cards_movie">
+                <!-- <div class="card_film">
+                    <div class="poster">
+                        <img src="" alt="image">
+                    </div>
+                    <div class=card_description>
+                        <p class="type_card"></p>
+                        <p class="title_card"></p>
+                        <p class="year_card"></p>
+                        <button id="deatils">Details</button>
+                    </div>
+                </div> -->
+            </div>
+            <div class="pagination">
+            </div>
+            <section class="film_info">
+                <h4>Film Info:</h4>
+                <div class="inner_film">
+                    <div class="film_banner">
+                        <img src="" alt="image">
+                    </div>
+                    <div class="film_description">
+                        <ul class="film_about">
+                            <li class="title_desk">Title:<span></span></li>
+                            <li class="realised_desk">Realised:<span></span></li>
+                            <li class="genre_desk">Genre:<span></span></li>
+                            <li class="country_desk">Country:<span></span></li>
+                            <li class="director_desk">Director:<span></span></li>
+                            <li class="writer_desk">Writer:<span></span></li>
+                            <li class="actors_desk">Actors:<span></span></li>
+                            <li class="awards_desk">Awards:<span></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div>
+    </div>
+</body>
+
+</html>
